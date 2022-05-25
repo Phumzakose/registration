@@ -90,13 +90,15 @@ input[type="radio"] {
   margin: 2em 0em; */
 }
 
-border {
+li {
   border: 2px solid black;
   border-radius: 15px;
   background-color: yellow;
   color: navy;
   width: 5em;
   height: 2em;
+  list-style: none;
+  display: inline-block;
 }
 .reg-numbers {
   text-align: center;
