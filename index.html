@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration-website</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>REGISTRATION NUMBERS</h1>
+      </div>
+      <div class="center">
+        <p>Check in which town your number plate is registered</p>
+      </div>
+      <div class="number-plate">
+        <form>
+          <laber for="registration">Registration Number</laber>
+          <input
+            type="text"
+            id="registration"
+            name="registration"
+            placeholder="Enter Registration Number"
+            required
+          />
+        </form>
+      </div>
+      <div class="radio-Btn">
+        <input
+          type="radio"
+          id="capetown"
+          name="registration"
+          value="Cape Town"
+        />
+        <label for="Cape Town">CapeTown</label>
+
+        <input
+          type="radio"
+          id="kuilsriver"
+          name="registration"
+          value="Kuilsriver"
+        />
+        <label for="Kuilsriver">Kuilsriver</label>
+        <input
+          type="radio"
+          id="stellenbosch"
+          name="registration"
+          value="Stellenbosch"
+        />
+        <label for="Stellenbosch">Stellenbosch</label>
+        <input
+          type="radio"
+          id="Bellville"
+          name="registration"
+          value="Bellville"
+        />
+        <label for="Bellvile">Bellville</label>
+      </div>
+      <div class="button">
+        <button class="bttn1" type="button">Add</button>
+        <button class="bttn2" type="button">View</button>
+      </div>
+      <div class="text-message">
+        <p id="text"></p>
+      </div>
+      <div class="number-plate">
+        <p class="plate"></p>
+      </div>
+      <div class="reg-numbers">
+        <p></p>
+      </div>
+    </div>
+    <script src="registrationFactory.js" charset="UTF-8"></script>
+    <script src="registration.js" charset="UTF-8"></script>
+  </body>
+</html>
