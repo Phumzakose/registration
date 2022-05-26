@@ -56,27 +56,26 @@ view.addEventListener("click", function () {
     var town = checkedRadioBtn.value;
     var reg = numberPlate.value.toUpperCase();
   }
-  // var newData = reg;
-  // if (localStorage.getItem("data") === null) {
-  //   localStorage.setItem("data", []);
-  // }
-  // let oldData = JSON.parse(localStorage.getItem("data"));
-  // oldData.push(newData);
-  // localStorage.setItem("data", JSON.stringify(oldData));
-  // if (localStorage.setItem("data") !== null) {
-  //   regNumber = oldData;
-  // }
-  //createElement(reg);
+
   for (let i = 0; i < localStorage.length; i++) {
-    array = regList.filter(function (reg) {
-      for (let i = 0; i < array.length; i++) {
-        console.log(array.length);
-        if (town === "Cape Town" && reg.startsWith("CA")) {
-          message.innerHTML = array[i];
-        } else if (town === "Bellville" && reg.includes("CY")) {
-          regNumber.innerHTML = array[i];
-        }
+    let array = regList.filter(function (reg) {
+      if (town === "Cape Town" && reg.startsWith("CA")) {
+        message.innerHTML = array[i];
+      } else if (town === "Bellville" && reg.includes("CY")) {
+        regNumber.innerHTML = array[i];
       }
     });
   }
+  createElement(reg);
 });
+
+// if (localStorage.getItem("regNumbers") !== null) {
+//   localStorage.setItem("regNumbers", "[]");
+// }
+// var oldData = JSON.parse(localStorage.getItem("data"));
+// oldData.push(newData);
+// localStorage.setItem("data", JSON.stringify(oldData));
+// if (localStorage.getItem("data") !== null) {
+//   let array = old;
+//   regNumber.innerHTML = oldData;
+//}
