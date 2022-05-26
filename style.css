@@ -8,12 +8,13 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  font-size: 18px;
 }
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 36%;
-  height: 500px;
+  width: 60%;
+  height: 600px;
   margin-top: 8%;
   background-color: darkgray;
 }
@@ -25,22 +26,18 @@ html {
   font-size: 18px;
 }
 .heading h1 {
-  margin-top: 80px;
+  margin-top: 10%;
 }
 .center {
   text-align: center;
-  margin-bottom: 30px;
-}
-.number-plate {
-  text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .radio-Btn {
   text-align: center;
   margin-bottom: 50px;
 }
 input[type="radio"] {
-  margin: 0 10px 0 10px;
+  margin: 0 20px 0 20px;
 }
 
 .bttn1 {
@@ -80,46 +77,58 @@ input[type="radio"] {
 }
 .number-plate {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .plate {
   text-align: center;
-  /* display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 2em 0em; */
+  margin: 2em 0em;
+  /* padding: 0px 70px 0px 70px; */
 }
 
 li {
   border: 2px solid black;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: yellow;
-  color: navy;
-  width: 5em;
-  height: 2em;
+  color: black;
+  font-weight: 600;
+  width: 6em;
+  height: 2.5em;
   list-style: none;
   display: inline-block;
-}
-.reg-numbers {
   text-align: center;
-  display: flex;
-  align-content: space-around;
+  padding-top: 6px;
+  margin: 0 1em 1em 0;
 }
 
 @media (max-width: 700px) {
   .container {
     width: 90%;
-    height: 550px;
+    height: 100%px;
     margin-top: 0px;
   }
   .radio-Btn {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
   }
   html {
     background-image: url(images/pexels-pixabay-164634.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    font-size: 18px;
+  }
+  li {
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: silver;
+    color: black;
+    font-weight: 400;
+    /* width: 8em;
+    height: 15em; */
+    list-style: none;
+    display: inline;
+    text-align: center;
+    padding-top: 6px;
   }
 }
