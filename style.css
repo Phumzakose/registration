@@ -9,12 +9,13 @@ html {
   background-size: cover;
   height: 100%;
   font-size: 18px;
+  /* background-color: darkgray; */
 }
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
-  height: 600px;
+  width: 40%;
+  /* height: 500px; */
   margin-top: 8%;
   background-color: darkgray;
 }
@@ -89,7 +90,7 @@ li {
   border: 2px solid black;
   border-radius: 10px;
   background-color: yellow;
-  color: black;
+  color: navy;
   font-weight: 600;
   width: 6em;
   height: 2.5em;
@@ -103,7 +104,7 @@ li {
 @media (max-width: 700px) {
   .container {
     width: 90%;
-    height: 100%px;
+    height: 100%;
     margin-top: 0px;
   }
   .radio-Btn {
@@ -121,11 +122,9 @@ li {
   li {
     border: 2px solid black;
     border-radius: 8px;
-    background-color: silver;
+    background-color: yellow;
     color: black;
     font-weight: 400;
-    /* width: 8em;
-    height: 15em; */
     list-style: none;
     display: inline;
     text-align: center;

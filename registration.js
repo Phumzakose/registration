@@ -3,7 +3,7 @@ var addbtn = document.querySelector(".bttn1");
 var view = document.querySelector(".bttn2");
 var message = document.querySelector("#text");
 var regNumber = document.querySelector(".plate");
-var regEx = /^[a-zA-Z]{2}\s{2}\d{3}[-]\d{3}$/g;
+var regEx = /^[a-zA-Z]{2}\s\d{3}[-]\d{3}$/g;
 var regList = [];
 
 if (localStorage["regNumbers"]) {
@@ -50,24 +50,33 @@ function createElement(regNumberItem) {
 
 view.addEventListener("click", function () {
   var checkedRadioBtn = document.querySelector(
-    "input[name='greet-language']:checked"
+    "input[name='registration']:checked"
   );
   if (checkedRadioBtn) {
     var town = checkedRadioBtn.value;
+    var reg = numberPlate.value.toUpperCase();
   }
+  // var newData = reg;
+  // if (localStorage.getItem("data") === null) {
+  //   localStorage.setItem("data", []);
+  // }
+  // let oldData = JSON.parse(localStorage.getItem("data"));
+  // oldData.push(newData);
+  // localStorage.setItem("data", JSON.stringify(oldData));
+  // if (localStorage.setItem("data") !== null) {
+  //   regNumber = oldData;
+  // }
+  //createElement(reg);
   for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    let value = localStorage.getItem("regNumbers");
-    if (town === "Cape Town" && value.startsWith("CA")) {
-      regNumber.innerHTML = value;
-    } else if (town === "Kuilsriver" && value.startsWith("CF")) {
-      regNumber.innerHTML = value;
-    } else if (town === "Bellville" && value.startsWith("CY")) {
-      regNumber.innerHTML = value;
-    } else if (town === "Stellenbosch" && value.startsWith("CL")) {
-      regNumber.innerHTML = value;
-    }
-
-    //regNumber.innerHTML = value;
+    array = regList.filter(function (reg) {
+      for (let i = 0; i < array.length; i++) {
+        console.log(array.length);
+        if (town === "Cape Town" && reg.startsWith("CA")) {
+          message.innerHTML = array[i];
+        } else if (town === "Bellville" && reg.includes("CY")) {
+          regNumber.innerHTML = array[i];
+        }
+      }
+    });
   }
 });
